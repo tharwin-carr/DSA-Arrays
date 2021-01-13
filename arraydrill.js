@@ -17,13 +17,13 @@ class Array {
     }
 
     _resize(size) {
-        const oldPtr = this.ptr;
+        const oldPtr = this.ptr; 0
         this.ptr = memory.allocate(size);
         if (this.ptr === null) {
             throw new Error('Out of memeory');
         }
         memory.copy(this.ptr, oldPtr, this.length);
-        memory.free(oldPtr);
+        memory.free(oldPtr); 
         this._capacity = size;
     }
 
@@ -77,11 +77,11 @@ function main() {
 
     //Add an item to the array
     arr.push(3); //length=1 capacity=3, ptr=0
-    arr.push(5);
-    arr.push(15);
-    arr.push(19);
-    arr.push(45);
-    arr.push(10);//length=6 number of values, capacity= 12 memory doubled, ptr=3
+    arr.push(5); //length=2 capacity=3,
+    arr.push(15); //length=3 capacity=12, ptr= 3
+    arr.push(19); //length=4 capacity=12,
+    arr.push(45); //length=5 capacity=12,
+    arr.push(10);//length=6 number of values, capacity= 12 length isnt longer than capacity, ptr=3 
 
     arr.pop();
     arr.pop();

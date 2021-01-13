@@ -3,3 +3,4 @@ function urlify(str) {
 }
 
 console.log(urlify('www.thinkful.com / this is a test'))
+
